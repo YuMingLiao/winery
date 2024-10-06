@@ -70,6 +70,8 @@ import Barbies.Constraints
 import Barbies.TH
 import Control.Applicative
 import Control.Exception
+import Control.Monad (replicateM)
+import Control.Monad.Fix (mfix)
 import Control.Monad.Reader
 import qualified Data.ByteString as B
 import qualified Data.ByteString.FastBuilder as BB
@@ -116,7 +118,7 @@ import Unsafe.Coerce
 import GHC.Float (castWord32ToFloat, castWord64ToDouble)
 import GHC.Natural
 import GHC.Generics
-import GHC.TypeLits
+import GHC.TypeLits hiding (SChar)
 
 -- | Serialisable datatype
 --
